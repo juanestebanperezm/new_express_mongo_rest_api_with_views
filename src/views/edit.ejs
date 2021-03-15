@@ -1,0 +1,34 @@
+<%- include('partials/_header') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/edit/<%= taks._id %>" method="POST" >
+        
+                        <div class="form-group">
+        
+                            <input type="text" name="title" placeholder="Titulo" class="form-control" value="<%=taks.title%>">
+        
+                        </div>
+        
+        
+        
+                        <div class="form-group">
+        
+                            <textarea name="description"  cols="80" rows="10" class="form-control" placeholder="Descripcion" ><%=taks.description%></textarea>
+                        </div>
+        
+        
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+        
+        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/_footer') %>
